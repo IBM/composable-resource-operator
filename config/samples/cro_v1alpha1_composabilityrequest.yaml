@@ -1,0 +1,12 @@
+apiVersion: cro.hpsys.ibm.ie.com/v1alpha1
+kind: ComposabilityRequest
+metadata:
+  labels:
+    app.kubernetes.io/name: composabilityrequest
+    app.kubernetes.io/instance: composabilityrequest-sample
+    app.kubernetes.io/part-of: cro
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: cro
+  name: composabilityrequest-sample
+spec:
+  # TODO(user): Add fields here

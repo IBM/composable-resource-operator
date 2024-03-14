@@ -1,0 +1,50 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: manager-role
+rules:
+- apiGroups:
+  - ""
+  resources:
+  - nodes
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - ""
+  resources:
+  - pods
+  verbs:
+  - delete
+  - get
+  - list
+  - patch
+  - update
+- apiGroups:
+  - cro.hpsys.ibm.ie.com
+  resources:
+  - composabilityrequests
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - cro.hpsys.ibm.ie.com
+  resources:
+  - composabilityrequests/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - cro.hpsys.ibm.ie.com
+  resources:
+  - composabilityrequests/status
+  verbs:
+  - get
+  - patch
+  - update

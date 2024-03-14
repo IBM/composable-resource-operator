@@ -1,0 +1,4 @@
+## Append samples of your project ##
+resources:
+- cro_v1alpha1_composabilityrequest.yaml
+#+kubebuilder:scaffold:manifestskustomizesamples
